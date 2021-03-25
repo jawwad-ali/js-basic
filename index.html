@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- https://hackernoon.com/javascript-practical-coding-challenges-for-beginners-4bq3ugr -->
+    <!-- 
+        18 and 19 left 
+     -->
+
+</body>
+<script>
+    // Coding challenge #1: Print numbers from 1 to 10
+    for (var i = 1; i <= 10; i++) {
+        // console.log(i)
+    }
+
+    // Coding challenge #2: Print the odd numbers less than 100
+    for (var a = 1; a <= 25; a += 2) {
+        // console.log(a)
+    }
+    // Coding challenge #3: Print the multiplication table with 7
+    for (var b = 1; b <= 10; b++) {
+        // console.log(" 7 x " + b + " = " + b * 7)
+    }
+    // Coding challenge #4: Print all the multiplication tables with numbers from 1 to 10
+    for (var c = 1; c <= 10; c++) {
+        for (var d = 1; d <= 10; d++) {
+            // console.log(c + " x " + d + " = " + c * d)
+        }
+    }
+    // Coding challenge #6: Calculate 10!
+    var prod = 1
+    for (var e = 1; e <= 10; e++) {
+        prod *= e
+    }
+    // console.log(prod)
+
+    // Coding challenge #7: Calculate the sum of odd numbers greater than 10 and less than 30
+    var prod1 = 1
+    for (var f = 11; f <= 30; f++) {
+        prod1 += f
+    }
+    // console.log(prod1)
+
+    // Coding challenge #11: Calculate the average of the numbers in an array of numbers
+    var arr = [10, 20, 30]
+    var sum = 0
+    for (var g = 0; g < arr.length; g++) {
+        sum += arr[g]
+    }
+    // console.log(sum / arr.length)
+
+    // Coding challenge #12: Create a function that receives an array of numbers and returns an array containing only the positive numbers
+    function positiveNumber(ar) {
+        var arr = []
+        for (var h = 0; h < ar.length; h++) {
+            var elem = ar[h]
+            if (elem > 0) {
+                arr.push(elem)
+            }
+        }
+        return arr
+    }
+    var arg = [555]
+    var res = positiveNumber(arg)
+    // console.log(res)
+
+    // solution 2
+    function posNumber(arr) {
+        return arr.filter(el => el > 0)
+    }
+    var nums = [5, 10, -15]
+    var getRes = posNumber(nums)
+    // console.log(getRes)
+
+    // Coding challenge #17: Calculate the sum of digits of a positive integer number
+    function sumOfDig(n) {
+        var s = n.toString()
+        var sum = 0
+
+        for (var char of s) {
+            var digit = parseInt(char)
+            sum += digit
+        }
+        return sum
+    }
+    // console.log(sumOfDig(153200))
+
+    // Coding challenge #20: Rotate an array to the left 1 position
+    var ar2 = [1, 2, 3]
+    rotateLeft(ar2)
+
+    function rotateLeft(ar2) {
+        var first = ar2.shift()
+        console.log(ar2.push(first))
+        console.log(ar2)
+    }
+</script>
+
+</html>
