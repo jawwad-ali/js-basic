@@ -100,9 +100,83 @@
 
     function rotateLeft(ar2) {
         var first = ar2.shift()
-        console.log(ar2.push(first))
-        console.log(ar2)
+        // console.log(ar2.push(first))
+        // console.log(ar2)
     }
+
+    // Coding challenge #21: Rotate an array to the right 1 position
+    var theArr = [10, 50, 60]
+    rotateRight(theArr)
+
+    function rotateRight(theArr) {
+        var xyz = theArr.shift()
+        // console.log(theArr.push(xyz))
+        // console.log(theArr)
+    }
+
+    // Coding challenge #22: Reverse an array
+    function reverseArray(ar) {
+        var ar2 = []
+
+        for (var i = ar.length - 1; i >= 0; i--) {
+            ar2.push(ar[i])
+        }
+        return ar2
+    }
+    var ar = [10, 20, 30]
+    var revRes = reverseArray(ar)
+    // console.log(revRes)
+
+    // Coding challenge #23: Reverse a string
+    function revStr(str) {
+        var str2 = ""
+
+        for (var i = str.length - 1; i >= 0; i--) {
+            var strLen = str[i]
+            // console.log(strLen)
+            str2 += strLen
+        }
+        return str2
+    }
+    var revStrVal = "Ali"
+    var revStrRes = revStr(revStrVal)
+    // console.log(revStrRes)
+
+    // Coding challenge #24: Create a function that will merge two arrays and return the result as a new array
+    function mergeArray(ar1, ar2) {
+        var ar = []
+
+        for (let el of ar1) {
+            ar.push(el)
+        }
+        for (let el of ar2) {
+            ar.push(el)
+        }
+        return ar
+    }
+    var ar1 = [20, 30, 40, 50]
+    var ar2 = [60, 70, 80]
+
+    var ar = mergeArray(ar1, ar2)
+    // console.log(ar)
+
+    // Coding challenge #25: Create a function that will receive two arrays of numbers as arguments and return an array composed of all the numbers that are either in the first array or second array but not in both
+    function intersection(ar1, ar2) {
+        var ar1 = [10, 20, 30];
+        var ar2 = [10, 55, 90];
+
+        var arr = []
+
+        for (var el of ar1) {
+            var cond = (!ar2.includes(el)) ? arr.push(el) : null
+        }
+        for (var el of ar2) {
+            var cond2 = (!ar2.includes(el)) ? arr.push(el) : null
+        }
+        return arr
+    }
+    var intersectionResult = intersection(ar1, ar2)
+    console.log(intersectionResult)
 </script>
 
 </html>
